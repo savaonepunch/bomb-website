@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap');
+
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: black;
+}
+
+p.front {
+    color: rgba(255, 255, 255, 0.459);
+}
+
+h1.back {
+    margin-top: 50px;
+    color: white;
+    font-size: xx-large;
+}
+
+p.back {
+    margin-top: 50px;
+    color: rgba(255, 255, 255, 0.452);
+    padding: 20px;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    padding: 20px 25px;
+    border-radius: 4px;
+}
+
+/* Style the header links */
+.header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+    padding: 0px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header a.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* Change the background color on mouse-over */
+.header-right a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the active/current link*/
+.header-right a:active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+    margin-top: 8px;
+    float: right;
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    perspective: 1000px;
+}
+
+.card {
+    /* background-size: 500px; */
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    text-align: center;
+
+    transition: transform .4s;
+    transform-style: preserve-3d;
+}
+
+.card__face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.card__face--front#cardbg1 {
+    background: hsla(191, 75%, 60%, 1);
+    background: linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#4DC9E6", endColorstr="#210CAE", GradientType=1);
+    border-radius: 10px;
+}
+
+.card__face--front#cardbg2 {
+    background: hsla(252, 40%, 29%, 1);
+    background: linear-gradient(90deg, hsla(252, 40%, 29%, 1) 0%, hsla(270, 77%, 71%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(252, 40%, 29%, 1) 0%, hsla(270, 77%, 71%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(252, 40%, 29%, 1) 0%, hsla(270, 77%, 71%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#392D69", endColorstr="#B57BEE", GradientType=1);
+    border-radius: 10px;
+}
+
+
+.card__face--front#cardbg3 {
+    background: hsla(213, 77%, 14%, 1);
+    background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#08203E", endColorstr="#557C93", GradientType=1);
+    border-radius: 10px;
+}
+
+
+.card__face--front#cardbg4 {
+    background: hsla(159, 35%, 45%, 1);
+    background: linear-gradient(90deg, hsla(159, 35%, 45%, 1) 0%, hsla(176, 68%, 12%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(159, 35%, 45%, 1) 0%, hsla(176, 68%, 12%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(159, 35%, 45%, 1) 0%, hsla(176, 68%, 12%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#4A9B7F", endColorstr="#0A3431", GradientType=1);
+    border-radius: 10px;
+}
+
+.card__face--back {
+    background: rgb(23, 23, 49);
+    border-radius: 10px;
+    transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card p {
+    margin-top: 30px;
+}
+
+.card-image {
+    height: 100px;
+    max-width: 200px;
+    margin: auto;
+    margin-top: 120px;
+    background-size: contain;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* optional, center the image */
+}
+
+.logo1 {
+    background-image: url('./cardlogo.png');
+}
+
+.logo2 {
+    background-image: url('./cardlogo.png');
+}
+
+.logo3 {
+    background-image: url('./cardlogo.png');
+}
+
+.logo4 {
+    background-image: url('./cardlogo.png');
+}
+
+/* From uiverse.io */
+button {
+    margin-top: 4px;
+    padding: .8em 2.2em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    /*background-image: url('');*/
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+}
