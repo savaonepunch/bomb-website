@@ -12,4 +12,13 @@ window.addEventListener('load', () => {
         });
     });
 
+    document.getElementById('discord').addEventListener('click', () => {
+        navigator.clipboard.writeText("LittleGuy252#7657").then(function () {
+            console.log('done');
+            alert("Discord copied to clipboard!");
+        }, function () {
+            console.log('error');
+            alert("Couldn't copy discord to clipboard!");
+        });
+    })
 })
