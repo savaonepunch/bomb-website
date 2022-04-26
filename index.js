@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
     });
 
     document.getElementById('discord').addEventListener('click', () => {
-        navigator.clipboard.writeText("LittleGuy252#7657").then(function () {
+        navigator.clipboard.writeText("Placeholder#0000").then(function () {
             console.log('done');
             alert("Discord copied to clipboard!");
         }, function () {
