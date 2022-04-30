@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap');
 
-
 body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: black;
+}
+
+p.watermark{
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    padding: 10px;
+    margin: 0;
 }
 
 p.front {
@@ -30,9 +41,12 @@ p.back {
 
 /* Style the header with a grey background and some padding */
 .header {
+    z-index: 10;
+    position: sticky; top: 0;
     overflow: hidden;
     padding: 20px 25px;
     border-radius: 4px;
+    background-color: #000;
 }
 
 /* Style the header links */
@@ -83,7 +97,7 @@ p.back {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
+    margin-bottom: 50px;
     perspective: 1000px;
 }
 
@@ -169,23 +183,6 @@ p.back {
     /* optional, center the image */
 }
 
-.logo1 {
-    background-image: url('./cardlogo.png');
-}
-
-.logo2 {
-    background-image: url('./cardlogo.png');
-}
-
-.logo3 {
-    background-image: url('./cardlogo.png');
-}
-
-.logo4 {
-    background-image: url('./cardlogo.png');
-}
-
-/* From uiverse.io */
 button {
     margin-top: 4px;
     padding: .8em 2.2em;
@@ -218,18 +215,37 @@ button:active {
     width: 100%;
     height: 100%;
     background-color: #000000;
-    /*background-image: url('');*/
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     position: absolute;
-    
 }
 
 canvas {
     display: block;
     vertical-align: bottom;
 }
+
+
+
+/*----------Change the logos here---------*/
+.logo1 {
+    background-image: url('./cardlogo.png');
+}
+
+.logo2 {
+    background-image: url('./cardlogo.png');
+}
+
+.logo3 {
+    background-image: url('./cardlogo.png');
+}
+
+.logo4 {
+    background-image: url('./cardlogo.png');
+}
+/*-----------------------------------------*/
+
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {
